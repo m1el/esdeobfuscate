@@ -4,6 +4,8 @@ ESDeobfuscate is a PoC JavaScriopt AST deobfuscator based on partial evaluation.
 
 Constant expressions and functions that return constant values are replaced with corresponding values.
 
+License = BSD.
+
 ## Usage
 
 ESDeobfuscate works with Syntax Trees provided by [esprima](https://github.com/ariya/esprima)
