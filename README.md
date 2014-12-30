@@ -9,3 +9,7 @@ Constant expressions and functions that return constant values are replaced with
 ESDeobfuscate works with Syntax Trees provided by [esprima](https://github.com/ariya/esprima)
 
     ast = esdeobfuscate.deobfuscate(ast);
+
+## Demo
+
+[m1el.github.io/esdeobfuscate](http://m1el.github.io/esdeobfuscate/)
