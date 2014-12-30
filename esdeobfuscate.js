@@ -79,7 +79,7 @@ var esdeobfuscate = (function() {
                 value: value
             };
         }
-        if (Number.isNaN(value)) {
+        if (typeof value === 'number' && isNaN(value)) {
             return {
                 type: 'Identifier',
                 name: 'NaN',
