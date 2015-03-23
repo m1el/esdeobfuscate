@@ -354,7 +354,7 @@ var esdeobfuscate = (function() {
                     return ret.consequent;
                 }
                 if (!ret.test.value && ret.alternate.pure) {
-                    return ret.alternate;
+                    return ret.alternate || {type: 'BlockStatement', body: []};
                 }
             }
         return ret;
@@ -398,10 +398,10 @@ var esdeobfuscate = (function() {
             };
             if (ret.test.pure) {
                 if (ret.test.value && ret.consequent.pure) {
-                    return mklit(ret.consequent.value);
+                    return mkliteral(ret.consequent.value);
                 }
                 if (!ret.test.value && ret.alternate.pure) {
-                    return mklit(ret.alternate.value);
+                    return mkliteral(ret.alternate.value);
                 }
             }
             return ret;
